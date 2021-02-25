@@ -2,7 +2,7 @@
 
  orbs:
   win: circleci/windows@2.2.0
-
+  snyk: snyk/snyk@0.0.8
  jobs:
    build:
      executor: win/default     
@@ -10,3 +10,9 @@
      steps:
        - checkout
        - run: dotnet build
+       - snyk/scan:
+                fail-on-issues: false
+                monitor-on-build: true
+                token-variable: SNYKTOKEN
+                organization: panda-not-omar
+                project: circleCi-dotnet-goof
