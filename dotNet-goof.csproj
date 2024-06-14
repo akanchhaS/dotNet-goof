@@ -3,7 +3,9 @@
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
-        <RootNamespace>dotNet_goof</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <invariantGlobalization>true</invariantGlobalization>
+        <dockerDefaultTargetOS>Linux</dockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
